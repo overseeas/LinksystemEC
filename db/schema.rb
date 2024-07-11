@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_11_070354) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_11_083206) do
   create_table "products", force: :cascade do |t|
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "rakuten_code"
   end
 
   create_table "rakuten_products", force: :cascade do |t|
-    t.string "code"
     t.string "sku"
     t.integer "price"
     t.integer "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reference_price"
     t.index ["product_id"], name: "index_rakuten_products_on_product_id"
   end
 

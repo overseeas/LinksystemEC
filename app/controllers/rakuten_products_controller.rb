@@ -16,7 +16,7 @@ class RakutenProductsController < ApplicationController
     
     private
         def rakutem_product_params
-            params.require(:rakuten_product).permit(:code, :sku, :price)
+            params.require(:rakuten_product).permit(:sku, :price, :reference_price)
         end
     
 end

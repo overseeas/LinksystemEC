@@ -1,4 +1,24 @@
 <h1><%= @product.code %></h1>
+<p>
+    <%= @product.rakuten_code %>
+</p>
+
+
+
+<h2>Rakuten info</h2>
+<table border="1", style="width:100%">
+    <tr>
+        <th style="width:40%">SKU管理番号</th>
+        <th>販売価格</th>
+        <th>表示価格</th>
+        <th>Action</th>
+    </tr>
+    
+    <%= render @product.rakuten_products %>
+    
+</table>
+<%= render 'rakuten_products/form' %>
+
 
 <ul>
     <li><%= link_to "Edit", edit_product_path(@product) %></li>
@@ -10,8 +30,4 @@
     </li>
 </ul>
 
-<h2>Rakuten info</h2>
-<%= render @product.rakuten_products %>
-
-<h2>Add sku</h2>
-<%= render 'rakuten_products/form' %>
+<%= link_to "To product list", products_path %>

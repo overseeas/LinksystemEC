@@ -1,21 +1,11 @@
-<p>
-    <strong>code:</strong>
-    <%= rakuten_product.code %>
-</p>
-
-<p>
-    <strong>sku:</strong>
-    <%= rakuten_product.sku %>
-</p>
-
-<p>
-    <strong>price:</strong>
-    <%= rakuten_product.price %>
-</p>
-
-<p>
-    <%= link_to "Destroy rakuten product info", [rakuten_product.product, rakuten_product], data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-    } %>
-</p>
+<tr>
+    <td><%= rakuten_product.sku %></td>
+    <td><%= rakuten_product.price %></td>
+    <td><%= rakuten_product.reference_price %></td>
+    <td>
+        <%= link_to "Delete", [rakuten_product.product, rakuten_product], data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+        } %>
+    </td>
+</tr>
