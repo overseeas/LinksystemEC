@@ -1,0 +1,19 @@
+<%= form_with model: [ @product, @product.rakuten_products.build ] do |form| %>
+    <p>
+        <%= form.label :code %>
+        <%= form.text_field :code %>
+    </p>
+
+    <p>
+        <%= form.label :sku %>
+        <%= form.text_field :sku %>
+    </p>
+    <p>
+        <%= form.label :price %>
+        <%= form.text_field :price %>
+    </p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
